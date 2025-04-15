@@ -18,8 +18,8 @@ Welcome to the **KPI Dashboard** project! This tool is designed to help students
     ```
 2. Create and activate a virtual environment:
     ```bash
-    python3 -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    python3 -m venv env_taller
+    source env_taller/bin/activate  # On Windows use `env_taller\Scripts\activate`
     ```
 3. Navigate to the project directory:
     ```bash
@@ -31,14 +31,22 @@ Welcome to the **KPI Dashboard** project! This tool is designed to help students
     ```
 5. Start the application:
     ```bash
-    python app.py
+    python main.py
     ```
 
 ### Usage
 
-1. Open the application in your browser.
-2. Add your KPIs and input data regularly.
-3. Use the dashboard to analyze your progress and adjust your goals.
+```bash
+    kpi_dashboard % source ../../env_taller/bin/activate
+    (env_taller) kpi_dashboard % python3 main.py
+    CLI interactiva iniciada. Escribe 'salir' para terminar o presiona Ctrl+D.
+    app> cargar archivo path=data/ventas.xlsx
+    Archivo cargado exitosamente desde: data/ventas.xlsx como tipo 'data'
+    app> calcular retencion_clientes
+    Resultado de calcular retencion_clientes:
+    Retención de clientes: 45.90%
+    app>
+```
 
 ### Contributing
 
