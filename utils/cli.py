@@ -1,6 +1,4 @@
 import importlib
-import sys
-import readline
 from pathlib import Path
 from utils.excel_manager import ExcelManager
 
