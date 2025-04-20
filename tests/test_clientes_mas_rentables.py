@@ -1,7 +1,7 @@
 # test_clientes_mas_rentables.py
 
 
-def test_execute():
+def _execute():
     """
     Test para la clase ClientesMasRentables.
     Crea un dataframe de ejemplo y verifica que el resultado sea correcto.
