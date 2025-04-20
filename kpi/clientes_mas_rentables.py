@@ -5,3 +5,4 @@ class ClientesMasRentables:
         """
         Top 3 clientes más rentables.
         """
+        return df

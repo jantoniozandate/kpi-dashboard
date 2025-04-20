@@ -1,13 +1,12 @@
 # test_clientes_mas_rentables.py
+import pandas as pd
+from kpi.clientes_mas_rentables import ClientesMasRentables
 
-
-def test_execute():
+def _execute(df):
     """
     Test para la clase ClientesMasRentables.
     Crea un dataframe de ejemplo y verifica que el resultado sea correcto.
     """
-    from kpi.clientes_mas_rentables import ClientesMasRentables
-    import pandas as pd
     # Crear un dataframe de ejemplo
     data = {
         "cliente_id": [1, 2, 3, 1, 2, 4],

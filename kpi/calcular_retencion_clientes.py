@@ -4,7 +4,8 @@ class CalcularRetencionClientes:
     def execute(self, df):
         """
         Calcula el porcentaje de retención de clientes.
-        Para simplificar: retención = (# clientes que compraron más de una vez) / (# total de clientes únicos)
+        Para simplificar: 
+            retención = (# clientes que compraron más de una vez) / (# total de clientes únicos)
         """
         if "cliente_id" not in df.columns:
             return "El DataFrame no contiene la columna 'cliente_id'"

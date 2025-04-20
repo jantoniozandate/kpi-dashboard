@@ -1,6 +1,4 @@
 import importlib
-import sys
-import readline
 from pathlib import Path
 from utils.excel_manager import ExcelManager
 
@@ -47,11 +45,11 @@ class CLIApp:
                 self.df = self.excel_manager.leer()
             elif tipo == "productos":
                 self.excel_manager.productos_path = ruta
-                self.excel_manager._cache.pop(ruta, None)
+                self.excel_manager.clear_cache(ruta)
                 self.excel_manager.leer_productos()
             elif tipo == "clientes":
                 self.excel_manager.clientes_path = ruta
-                self.excel_manager._cache.pop(ruta, None)
+                self.excel_manager.clear_cache(ruta)
                 self.excel_manager.leer_clientes()
             else:
                 print("Tipo no reconocido. Usa: data, productos o clientes")
