@@ -1,12 +1,12 @@
 # test_calcular_retencion_clientes.py
+import pandas as pd
+from kpi.calcular_retencion_clientes import CalcularRetencionClientes
 
 def test_execute():
     """
     Test para la clase CalcularRetencionClientes.
     Crea un dataframe de ejemplo y verifica que el resultado sea correcto.
     """
-    from kpi.calcular_retencion_clientes import CalcularRetencionClientes
-    import pandas as pd
     # Crear un dataframe de ejemplo
     data = {
         "cliente_id": [1, 2, 3, 1, 2, 4],
