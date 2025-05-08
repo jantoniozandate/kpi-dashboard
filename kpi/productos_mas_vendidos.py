@@ -8,3 +8,13 @@ class ProductosMasVendidos:
         Se agrupa por producto y se suma la cantidad vendida.
         Luego se ordena de mayor a menor y se seleccionan los primeros 10 productos.
         """
+
+        productos_vendidos = (
+            df.groupby("producto_id")["cantidad"]
+            .sum()
+            .reset_index()
+            .sort_values(by="cantidad", ascending=False)
+            .head(10)
+        )
+ 
+        return productos_vendidos
