@@ -12,3 +12,11 @@ class DetectarAnomalias:
         - media es la media de la serie
         - desviacion_estandar es la desviación estándar de la serie
         """
+        media = df['total'].mean()
+        desviacion_estandar = df['total'].std()
+        df['z_score'] = (df['total'] - media) / desviacion_estandar
+
+        df['anomalía'] = df['z_score'].apply(lambda x: 'Sí' if abs(x) > 3 else 'No')
+        return df
+
+        
